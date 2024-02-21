@@ -1,0 +1,145 @@
+* {
+  margin: 0; /* reseta o margin padrão para 0 */
+  padding: 0; /*  reseta o padding padrão para 0 */
+  box-sizing: border-box;
+}
+
+body {
+  background-image: var(--bg-url); /* a imagem  que será usada como fundo */
+  background-repeat: no-repeat; /* não repetir a imagem */
+  background-position: top center; /*  posicionar o topo da imagem na central */
+  background-size: cover; /*  dimensionar para preencher todo o container */
+}
+
+body * {
+  font-family: "Inter", sans-serif;
+  color: var(--text-color);
+}
+
+#container {
+  width: 360px;
+  margin: auto;
+  padding-top: 56px;
+}
+#profile {
+  text-align: center;
+  padding: 24px;
+}
+
+#profile img {
+  width: 112px;
+  padding: 8px;
+}
+
+profile p {
+  font-weight: 500px;
+  line-height: 24px;
+}
+
+#switch {
+  position: relative;
+  width: 64px;
+  margin: 4px auto;
+}
+
+#switch button {
+  width: 32px;
+  height: 32px;
+  background: white var(--switch-bg-url) no-repeat center;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-50%);
+  left: initial;
+}
+
+.light #switch button {
+  right: 0;
+  right: inicial;
+}
+
+#switch span {
+  display: block;
+  width: 64px;
+  height: 24px;
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 9999px;
+}
+/*  links - listas */
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px;
+}
+:root {
+  --text-color: white;
+  --bg-url: url(./assets/bg-mobile.jpg);
+  --stroke-color: rgba(255, 255, 255, 0.5);
+  --surface-color: rgba(255, 255, 255, 0.05);
+  --surface-color-hover: rgba(0, 0, 0, 0.02);
+  --highlight-color: rgba(255, 255, 255, 0.2);
+  --switch-bg-url: url(./assets/moon-stars.svg);
+}
+
+.light {
+  --text-color: black;
+  --bg-url: url(./assets/bg-mobile-light.jpg);
+  --stroke-color: rgba(0, 0, 0, 0.5);
+  --surface-color: rgba(0, 0, 0, 0.05);
+  --surface-color-hover: rgba(0, 0, 0, 0.02);
+  --highlight-color: rgba(0, 0, 0, 0.1);
+  --switch-bg-url: url(./assets/sun.svg);
+}
+ul li a {
+  /*   todos os links terão essa estilização */
+  border: 1px solid var(--stroke-color); /*   adiciona uma linha em volta do link */
+  display: flex; /*   permite definir a direção de um fluxo de elementos */
+  align-items: center; /*   alinhar os itens verticalmente */
+  padding: 16px 24px; /*  vertical horizontal */
+  justify-content: center; /*  centralizar o que estiver no meio */
+  background: var(--surface-color); /*  fundo da barra de navegação */
+  border-radius: 8px; /*  arredondamento dos cantos */
+  backdrop-filter: blur(4px); /* para desfocar o fundo */
+  text-decoration: none; /* remove underline from links */
+  font-weight: 400; /*  fonte mais leve do que o de "p"*/
+  transition: background 0.5s; /*  para que o efeito de mudança da cor fique suave */
+}
+
+ul li a:hover {
+  /*  quando passarmos por cima do link com o mouse */
+  /*  mudar cor do botão ao passar o mouse por cima*/
+  background: var(--surface-color-hover); /*   muda a opacidade do fundo */
+  border: 1.5px solid var(--text-color); /*    muda a largura da borda */
+}
+
+#social-media {
+  display: flex;
+  gap: 32px;
+  padding: 24px 0;
+  font-size: 24px;
+  justify-content: center;
+}
+
+#social-media a {
+  display: flex; /*    permite definir a direção de um fluxo de elementos */
+  align-items: center; /*   alinha os itens verticalmente */
+  justify-content: center; /* centraliza o que está no meio */
+  padding: 16px; /* vertical horizontal */
+  transition: all 0.2s;
+  border-radius: 50%;
+}
+
+#social-media a:hover {
+  background: var(--highlight-color);
+}
+
+#container p {
+  text-align: center;
+}
