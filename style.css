@@ -9,11 +9,13 @@ body {
   background-repeat: no-repeat; /* não repetir a imagem */
   background-position: top center; /*  posicionar o topo da imagem na central */
   background-size: cover; /*  dimensionar para preencher todo o container */
+  height: 100vh;
 }
 
 body * {
   font-family: "Inter", sans-serif;
   color: var(--text-color);
+
 }
 
 #container {
@@ -143,4 +145,15 @@ ul li a:hover {
 
 #container p {
   text-align: center;
+}
+
+/* media-queries */
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./assets/bg-desktop.jpg);
+  }
+
+  .light {
+    --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
 }
